@@ -11,7 +11,7 @@ I read the data using Pandas in Jupyter notebook
 
 There are some columns with lot of NaN values. Those columns barely has data. So I removed those columns using pandas.
 
-The attacker column has the battle outcome details in binary fomat(0 and 1). I mapped it with 'win' and 'loss'.
+The attacker column has the battle outcome details in binary format (0 and 1). I mapped it with 'win' and 'loss'.
 
 attacker_size and defender_size columns has some NaN values. I replaced those values with the mean values of the respective columns.
 
