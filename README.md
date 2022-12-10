@@ -19,13 +19,13 @@ And I converted the dataframes into csv files in order to put it in the s3 bucke
 
 # Creating the components of the pipeline
 
-I created s3 client using boto3 package. though which I created a s3 bucket.
+I created s3 client using boto3 package. through which I created a s3 bucket.
 
-I created a Mysql server in AWS RDS. And I connected with the server using Sqlalchemy package. And I created database in order to put table thorough Lambda function.
+I created a Mysql server in AWS RDS. And I connected with the server using Sqlalchemy package. And I created a database in order to put table through Lambda function.
 
-I created a Lambda function with a trigger of s3 bucket which I have created. If any input of a csv file will trigger the function.
-In the code part of I connected with the s3 and Mysql. But here I needed to create a lambda layer to import the Sqlalchemy and Pandas packages which are not available in Lambda.
+I created a Lambda function with a trigger of s3 bucket which I have created. If any input of a csv file in s3 bucket will trigger the lambda function.
+In the code part of the function, I connected with the s3 and Mysql. But here I needed to create a lambda layer to import the Sqlalchemy and Pandas packages which are not available in Lambda.
 
 # Working of The Pipeline
 
-Once I put a csv file which i've created from the cleaned dataframe, It'll trigger the Lambda function. Then the Lambda function access the particular s3 bucket and read the csv file in it. And using Pandas it'll create a dataframe out of the csv file. Using pandas to_sql() method it'll put the dataframe as table in the AWS RDS.
+Once I put a csv file which i've created from the cleaned dataframe in s3 bucket, It'll trigger the Lambda function. Then the Lambda function access the particular s3 bucket and read the csv file in it. And using Pandas it'll create a dataframe out of the csv file. Using pandas to_sql() method it'll put the dataframe as table in the AWS RDS.
