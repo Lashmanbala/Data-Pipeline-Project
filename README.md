@@ -24,7 +24,7 @@ I created s3 client using boto3 package. though which I created a s3 bucket.
 I created a Mysql server in AWS RDS. And I connected with the server using Sqlalchemy package. And I created database in order to put table thorough Lambda function.
 
 I created a Lambda function with a trigger of s3 bucket which I have created. If any input of a csv file will trigger the function.
-In the code part of I connected with the s3 and Mysql. But here I needed to create a lambda layer to import the Sqlalchemy and Panas packages which are not available in Lambda.
+In the code part of I connected with the s3 and Mysql. But here I needed to create a lambda layer to import the Sqlalchemy and Pandas packages which are not available in Lambda.
 
 # Working of The Pipeline
 
